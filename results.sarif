@@ -58,6 +58,16 @@
               }
             },
             {
+              "id": "CppClangTidyBugproneReservedIdentifier",
+              "shortDescription": {
+                "text": "bugprone-reserved-identifier clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
               "id": "CppClangTidyClangDiagnosticFormat",
               "shortDescription": {
                 "text": "format clang diagnostic"
@@ -131,6 +141,16 @@
               "id": "CppClangTidyClangDiagnosticSelfAssign",
               "shortDescription": {
                 "text": "self-assign clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticShadow",
+              "shortDescription": {
+                "text": "shadow clang diagnostic"
               },
               "properties": {
                 "tags": ["Clang Diagnostics"],
@@ -800,7 +820,7 @@
                   "startLine": 7,
                   "startColumn": 10,
                   "endColumn": 19,
-                  "charOffset": 89,
+                  "charOffset": 70,
                   "charLength": 9
                 }
               }
@@ -824,7 +844,7 @@
                   "startLine": 12,
                   "startColumn": 7,
                   "endColumn": 11,
-                  "charOffset": 148,
+                  "charOffset": 129,
                   "charLength": 4
                 }
               }
@@ -848,7 +868,7 @@
                   "startLine": 20,
                   "startColumn": 15,
                   "endColumn": 22,
-                  "charOffset": 241,
+                  "charOffset": 222,
                   "charLength": 7
                 }
               }
@@ -872,7 +892,7 @@
                   "startLine": 23,
                   "startColumn": 5,
                   "endColumn": 10,
-                  "charOffset": 331,
+                  "charOffset": 312,
                   "charLength": 5
                 }
               }
@@ -897,7 +917,7 @@
                   "startLine": 28,
                   "startColumn": 9,
                   "endColumn": 14,
-                  "charOffset": 449,
+                  "charOffset": 430,
                   "charLength": 5
                 }
               }
@@ -921,7 +941,7 @@
                   "startLine": 32,
                   "startColumn": 7,
                   "endColumn": 14,
-                  "charOffset": 488,
+                  "charOffset": 469,
                   "charLength": 7
                 }
               }
@@ -946,7 +966,7 @@
                   "startLine": 35,
                   "startColumn": 2,
                   "endColumn": 9,
-                  "charOffset": 524,
+                  "charOffset": 505,
                   "charLength": 7
                 }
               }
@@ -970,7 +990,7 @@
                   "startLine": 39,
                   "startColumn": 5,
                   "endColumn": 13,
-                  "charOffset": 551,
+                  "charOffset": 532,
                   "charLength": 8
                 }
               }
@@ -995,7 +1015,7 @@
                   "startLine": 43,
                   "startColumn": 17,
                   "endColumn": 24,
-                  "charOffset": 613,
+                  "charOffset": 639,
                   "charLength": 7
                 }
               }
@@ -1020,7 +1040,7 @@
                   "startLine": 55,
                   "startColumn": 5,
                   "endColumn": 16,
-                  "charOffset": 751,
+                  "charOffset": 777,
                   "charLength": 11
                 }
               }
@@ -1044,7 +1064,7 @@
                   "startLine": 66,
                   "startColumn": 12,
                   "endColumn": 20,
-                  "charOffset": 983,
+                  "charOffset": 1009,
                   "charLength": 8
                 }
               }
@@ -1068,7 +1088,7 @@
                   "startLine": 70,
                   "startColumn": 7,
                   "endColumn": 8,
-                  "charOffset": 1007,
+                  "charOffset": 1033,
                   "charLength": 1
                 }
               }
@@ -1093,7 +1113,7 @@
                   "startLine": 73,
                   "startColumn": 5,
                   "endColumn": 12,
-                  "charOffset": 1026,
+                  "charOffset": 1052,
                   "charLength": 7
                 }
               }
@@ -1117,7 +1137,7 @@
                   "startLine": 77,
                   "startColumn": 7,
                   "endColumn": 8,
-                  "charOffset": 1097,
+                  "charOffset": 1123,
                   "charLength": 1
                 }
               }
@@ -1142,7 +1162,7 @@
                   "startLine": 80,
                   "startColumn": 5,
                   "endColumn": 12,
-                  "charOffset": 1127,
+                  "charOffset": 1153,
                   "charLength": 7
                 }
               }
@@ -1167,7 +1187,7 @@
                   "startLine": 80,
                   "startColumn": 25,
                   "endColumn": 32,
-                  "charOffset": 1147,
+                  "charOffset": 1173,
                   "charLength": 7
                 }
               }
@@ -1192,7 +1212,7 @@
                   "startLine": 84,
                   "startColumn": 16,
                   "endColumn": 17,
-                  "charOffset": 1207,
+                  "charOffset": 1233,
                   "charLength": 1
                 }
               }
@@ -1217,8 +1237,32 @@
                   "startLine": 90,
                   "startColumn": 18,
                   "endColumn": 19,
-                  "charOffset": 1312,
+                  "charOffset": 1338,
                   "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDeclaratorNeverUsed",
+          "message": {
+            "text": "Global variable 'double_up' is never used",
+            "id": "CppDeclaratorNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 12,
+                  "endColumn": 21,
+                  "charOffset": 1431,
+                  "charLength": 9
                 }
               }
             }
@@ -1238,10 +1282,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 97,
+                  "startLine": 99,
                   "startColumn": 5,
                   "endColumn": 9,
-                  "charOffset": 1398,
+                  "charOffset": 1492,
                   "charLength": 4
                 }
               }
@@ -1262,11 +1306,83 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 101,
+                  "startLine": 103,
                   "startColumn": 9,
                   "endColumn": 23,
-                  "charOffset": 1498,
+                  "charOffset": 1592,
                   "charLength": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppAssignedValueIsNeverUsed",
+          "message": {
+            "text": "Assigned value is never used",
+            "id": "CppAssignedValueIsNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 5,
+                  "endColumn": 14,
+                  "charOffset": 1678,
+                  "charLength": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyBugproneReservedIdentifier",
+          "message": {
+            "text": "Declaration uses identifier '__bad_name_of_variable', which is a reserved identifier [bugprone-reserved-identifier]",
+            "id": "CppClangTidyBugproneReservedIdentifier"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 108,
+                  "startColumn": 9,
+                  "endColumn": 31,
+                  "charOffset": 1700,
+                  "charLength": 22
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppAssignedValueIsNeverUsed",
+          "message": {
+            "text": "Assigned value is never used",
+            "id": "CppAssignedValueIsNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 2,
+                  "endColumn": 26,
+                  "charOffset": 1775,
+                  "charLength": 24
                 }
               }
             }
@@ -1286,10 +1402,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 104,
+                  "startLine": 114,
                   "startColumn": 14,
                   "endColumn": 22,
-                  "charOffset": 1569,
+                  "charOffset": 1854,
                   "charLength": 8
                 }
               }
@@ -1310,10 +1426,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 106,
+                  "startLine": 116,
                   "startColumn": 37,
                   "endColumn": 40,
-                  "charOffset": 1655,
+                  "charOffset": 1940,
                   "charLength": 3
                 }
               }
@@ -1334,11 +1450,59 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 106,
+                  "startLine": 116,
                   "startColumn": 45,
                   "endColumn": 53,
-                  "charOffset": 1663,
+                  "charOffset": 1948,
                   "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticShadow",
+          "message": {
+            "text": "Declaration shadows a variable in the global namespace [clang-diagnostic-shadow]",
+            "id": "CppClangTidyClangDiagnosticShadow"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 9,
+                  "endColumn": 18,
+                  "charOffset": 2018,
+                  "charLength": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDeclaratorNeverUsed",
+          "message": {
+            "text": "Local variable 'double_up' is never used",
+            "id": "CppDeclaratorNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 9,
+                  "endColumn": 18,
+                  "charOffset": 2018,
+                  "charLength": 9
                 }
               }
             }
@@ -1358,10 +1522,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 112,
+                  "startLine": 123,
                   "startColumn": 17,
                   "endColumn": 18,
-                  "charOffset": 1773,
+                  "charOffset": 2072,
                   "charLength": 1
                 }
               }
@@ -1382,10 +1546,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 118,
+                  "startLine": 129,
                   "startColumn": 17,
                   "endColumn": 18,
-                  "charOffset": 1870,
+                  "charOffset": 2175,
                   "charLength": 1
                 }
               }
@@ -1407,10 +1571,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 129,
+                  "startLine": 140,
                   "startColumn": 9,
                   "endColumn": 11,
-                  "charOffset": 2002,
+                  "charOffset": 2331,
                   "charLength": 2
                 }
               }
@@ -1432,10 +1596,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 130,
+                  "startLine": 141,
                   "startColumn": 9,
                   "endColumn": 11,
-                  "charOffset": 2019,
+                  "charOffset": 2348,
                   "charLength": 2
                 }
               }
@@ -1456,10 +1620,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 131,
+                  "startLine": 142,
                   "startColumn": 18,
                   "endColumn": 20,
-                  "charOffset": 2045,
+                  "charOffset": 2374,
                   "charLength": 2
                 }
               }
@@ -1480,10 +1644,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 131,
+                  "startLine": 142,
                   "startColumn": 21,
                   "endColumn": 22,
-                  "charOffset": 2048,
+                  "charOffset": 2377,
                   "charLength": 1
                 }
               }
@@ -1504,10 +1668,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 133,
+                  "startLine": 144,
                   "startColumn": 5,
                   "endColumn": 11,
-                  "charOffset": 2084,
+                  "charOffset": 2412,
                   "charLength": 6
                 }
               }
@@ -1528,10 +1692,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 133,
+                  "startLine": 144,
                   "startColumn": 10,
                   "endColumn": 11,
-                  "charOffset": 2089,
+                  "charOffset": 2417,
                   "charLength": 1
                 }
               }
@@ -1553,10 +1717,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 135,
+                  "startLine": 146,
                   "startColumn": 11,
                   "endColumn": 17,
-                  "charOffset": 2110,
+                  "charOffset": 2438,
                   "charLength": 6
                 }
               }
@@ -1577,10 +1741,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 137,
+                  "startLine": 148,
                   "startColumn": 5,
                   "endColumn": 11,
-                  "charOffset": 2141,
+                  "charOffset": 2469,
                   "charLength": 6
                 }
               }
@@ -1601,10 +1765,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 143,
+                  "startLine": 154,
                   "startColumn": 13,
                   "endColumn": 23,
-                  "charOffset": 2237,
+                  "charOffset": 2565,
                   "charLength": 10
                 }
               }
@@ -1625,10 +1789,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 147,
+                  "startLine": 158,
                   "startColumn": 17,
                   "endColumn": 25,
-                  "charOffset": 2306,
+                  "charOffset": 2634,
                   "charLength": 8
                 }
               }
@@ -1649,10 +1813,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 147,
+                  "startLine": 158,
                   "startColumn": 17,
                   "endColumn": 25,
-                  "charOffset": 2306,
+                  "charOffset": 2634,
                   "charLength": 8
                 }
               }
@@ -1674,10 +1838,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 168,
+                  "startLine": 179,
                   "startColumn": 14,
                   "endColumn": 17,
-                  "charOffset": 2665,
+                  "charOffset": 2993,
                   "charLength": 3
                 }
               }
@@ -1698,10 +1862,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 169,
+                  "startLine": 180,
                   "startColumn": 27,
                   "endColumn": 30,
-                  "charOffset": 2726,
+                  "charOffset": 3059,
                   "charLength": 3
                 }
               }
@@ -1722,10 +1886,10 @@
                   "uriBaseId": "SRCROOT"
                 },
                 "region": {
-                  "startLine": 177,
+                  "startLine": 189,
                   "startColumn": 13,
                   "endColumn": 14,
-                  "charOffset": 2805,
+                  "charOffset": 3231,
                   "charLength": 1
                 }
               }
