@@ -1,4 +1,4 @@
-// CDom.cpp : Defines the entry point for the console application.
+// The Worst possible coder! please contribute!
 //
 
 
@@ -36,7 +36,7 @@ public:
 	{
 		
 	}
-    ~Derived()
+    ~Derived()  // base does not have a virtual destructor!
 	{
 		// will not call base!
 	}
@@ -94,11 +94,21 @@ void goodfunc(A& a) // ok by  ref
 }
 
 
+static int double_up = 0;   // lets define this in another scope
+
 int main(int argc, const char* argv[])
 {
     int uninitialized_value;
     int shadowed = 5;
     int unusedvariable = 0;
+
+    int mispell = 23; // bad speling behiend the keiboard
+    mispell++;
+
+    int __bad_name_of_variable = 0; // __ should be exlusive to compiler stuff
+
+	__bad_name_of_variable++;
+
 
 	// shadowed value, best practice
     for (int shadowed = 0; shadowed < 10; shadowed++ )
@@ -108,14 +118,15 @@ int main(int argc, const char* argv[])
 
     useretval(uninitialized_value);
 
-    // check operator precedence
-    if(shadowed & 4 == 0)
+
+    int double_up = 23; // defined globally 
+    if(shadowed & 4 == 0) // check operator precedence
     {
         printf("test");
     }
 
-    // accidental assigning
-    if(shadowed = 1)
+    
+    if(shadowed = 1) // accidental assigning
     {
         shadowed = 12;
     }
@@ -128,7 +139,7 @@ int main(int argc, const char* argv[])
 
     int fx = 7;
     int fy = 2;
-    float fval = fx / fy;   // un promoted float
+    float fval = fx / fy;   // unpromoted float
 
     fval = fval;
 
@@ -165,16 +176,17 @@ int main(int argc, const char* argv[])
     
     try
     {
-        auto str = retBadRef("test", "test2");
-        printf("strings", str.c_str());
+        auto str = retBadRef("test", "test2");     
+        printf("strings", str.c_str());     // oops, forgot expected argument in varg/
     }
     catch (...)
     {
     }
 
 
+    // lets do something bad but very common
     B b;
-    badfunc(b);
+    badfunc(b);     // nasty
     goodfunc(b);
 
     return 0;
