@@ -1,0 +1,1739 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Resharper",
+          "rules": [
+            {
+              "id": "CppAssignedValueIsNeverUsed",
+              "shortDescription": {
+                "text": "Assigned value is never used"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppCStyleCast",
+              "shortDescription": {
+                "text": "C-style cast is used instead of a C++ cast"
+              },
+              "properties": {
+                "tags": ["Common Practices and Code Improvements"],
+                "Category": "BestPractice"
+              }
+            },
+            {
+              "id": "CppClangTidyBugproneExceptionEscape",
+              "shortDescription": {
+                "text": "bugprone-exception-escape clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyBugproneIntegerDivision",
+              "shortDescription": {
+                "text": "bugprone-integer-division clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyBugproneNarrowingConversions",
+              "shortDescription": {
+                "text": "bugprone-narrowing-conversions clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticFormat",
+              "shortDescription": {
+                "text": "format clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticFormatExtraArgs",
+              "shortDescription": {
+                "text": "format-extra-args clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticImplicitIntFloatConversion",
+              "shortDescription": {
+                "text": "implicit-int-float-conversion clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticMismatchedNewDelete",
+              "shortDescription": {
+                "text": "mismatched-new-delete clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticNonportableSystemIncludePath",
+              "shortDescription": {
+                "text": "nonportable-system-include-path clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticParentheses",
+              "shortDescription": {
+                "text": "parentheses clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticReturnStackAddress",
+              "shortDescription": {
+                "text": "return-stack-address clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyClangDiagnosticSelfAssign",
+              "shortDescription": {
+                "text": "self-assign clang diagnostic"
+              },
+              "properties": {
+                "tags": ["Clang Diagnostics"],
+                "Category": "Clang"
+              }
+            },
+            {
+              "id": "CppClangTidyModernizeDeprecatedHeaders",
+              "shortDescription": {
+                "text": "modernize-deprecated-headers clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyModernizeUseAuto",
+              "shortDescription": {
+                "text": "modernize-use-auto clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyModernizeUseEqualsDefault",
+              "shortDescription": {
+                "text": "modernize-use-equals-default clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyModernizeUseNodiscard",
+              "shortDescription": {
+                "text": "modernize-use-nodiscard clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppClangTidyPerformanceUnnecessaryValueParam",
+              "shortDescription": {
+                "text": "performance-unnecessary-value-param clang-tidy check"
+              },
+              "properties": {
+                "tags": ["Clang-Tidy Checks"],
+                "Category": "ClangTidy"
+              }
+            },
+            {
+              "id": "CppDeclarationHidesLocal",
+              "shortDescription": {
+                "text": "Hiding local declaration"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppDeclaratorNeverUsed",
+              "shortDescription": {
+                "text": "Declarator is never used"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppDoxygenUndocumentedParameter",
+              "shortDescription": {
+                "text": "Missing function parameter description in a documentation comment"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppDoxygenUnresolvedReference",
+              "shortDescription": {
+                "text": "Unresolved reference in doxygen comment"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppEnforceOverridingFunctionStyle",
+              "shortDescription": {
+                "text": "Use preferred overriding function style: Enforce overriding function style"
+              },
+              "properties": {
+                "tags": ["Syntax Style"],
+                "Category": "CodeStyleIssues"
+              }
+            },
+            {
+              "id": "CppHiddenFunction",
+              "shortDescription": {
+                "text": "Non-virtual class member function hidden in a derived class"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppHidingFunction",
+              "shortDescription": {
+                "text": "Class member function hiding a non-virtual function from a base class"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppInitializedValueIsAlwaysRewritten",
+              "shortDescription": {
+                "text": "Declarator is reassigned in all paths before being read"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppJoinDeclarationAndAssignment",
+              "shortDescription": {
+                "text": "Declaration and assignment can be joined"
+              },
+              "properties": {
+                "tags": ["Redundancies in Code"],
+                "Category": "CodeRedundancy"
+              }
+            },
+            {
+              "id": "CppLocalVariableMayBeConst",
+              "shortDescription": {
+                "text": "Local variable can be made const"
+              },
+              "properties": {
+                "tags": ["Common Practices and Code Improvements"],
+                "Category": "BestPractice"
+              }
+            },
+            {
+              "id": "CppMemberFunctionMayBeConst",
+              "shortDescription": {
+                "text": "Member function can be made const"
+              },
+              "properties": {
+                "tags": ["Common Practices and Code Improvements"],
+                "Category": "BestPractice"
+              }
+            },
+            {
+              "id": "CppParameterMayBeConstPtrOrRef",
+              "shortDescription": {
+                "text": "Parameter can be made pointer/reference to const"
+              },
+              "properties": {
+                "tags": ["Common Practices and Code Improvements"],
+                "Category": "BestPractice"
+              }
+            },
+            {
+              "id": "CppPolymorphicClassWithNonVirtualPublicDestructor",
+              "shortDescription": {
+                "text": "Polymorphic class with non-virtual public destructor"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppPossiblyUnintendedObjectSlicing",
+              "shortDescription": {
+                "text": "Possibly unintended object slicing"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppPrintfBadFormat",
+              "shortDescription": {
+                "text": "Invalid printf format specifier"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppUnusedIncludeDirective",
+              "shortDescription": {
+                "text": "Possibly unused #include directive"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            },
+            {
+              "id": "CppVirtualFunctionCallInsideCtor",
+              "shortDescription": {
+                "text": "Call to a virtual function inside a constructor/destructor is resolved at compile time"
+              },
+              "properties": {
+                "tags": ["Potential Code Quality Issues"],
+                "Category": "CodeSmell"
+              }
+            }
+          ]
+        }
+      },
+      "originalUriBaseIds": {
+        "SRCROOT": {
+          "uri": "file:///d:/Github/TestAnalysis/"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CppClangTidyModernizeDeprecatedHeaders",
+          "level": "note",
+          "message": {
+            "text": "Inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [modernize-deprecated-headers]",
+            "id": "CppClangTidyModernizeDeprecatedHeaders"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 10,
+                  "endColumn": 19,
+                  "charOffset": 88,
+                  "charLength": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppUnusedIncludeDirective",
+          "message": {
+            "text": "Possibly unused #include directive",
+            "id": "CppUnusedIncludeDirective"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 1,
+                  "endColumn": 20,
+                  "charOffset": 99,
+                  "charLength": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeDeprecatedHeaders",
+          "level": "note",
+          "message": {
+            "text": "Inclusion of deprecated C++ header 'stdlib.h'; consider using 'cstdlib' instead [modernize-deprecated-headers]",
+            "id": "CppClangTidyModernizeDeprecatedHeaders"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 10,
+                  "endColumn": 20,
+                  "charOffset": 108,
+                  "charLength": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppUnusedIncludeDirective",
+          "message": {
+            "text": "Possibly unused #include directive",
+            "id": "CppUnusedIncludeDirective"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 1,
+                  "endColumn": 20,
+                  "charOffset": 120,
+                  "charLength": 19
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeDeprecatedHeaders",
+          "level": "note",
+          "message": {
+            "text": "Inclusion of deprecated C++ header 'string.h'; consider using 'cstring' instead [modernize-deprecated-headers]",
+            "id": "CppClangTidyModernizeDeprecatedHeaders"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 10,
+                  "endColumn": 20,
+                  "charOffset": 129,
+                  "charLength": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyPerformanceUnnecessaryValueParam",
+          "level": "note",
+          "message": {
+            "text": "The parameter 'func' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]",
+            "id": "CppClangTidyPerformanceUnnecessaryValueParam"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 53,
+                  "endColumn": 57,
+                  "charOffset": 302,
+                  "charLength": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppJoinDeclarationAndAssignment",
+          "level": "note",
+          "message": {
+            "text": "Declaration and assignment can be joined",
+            "id": "CppJoinDeclarationAndAssignment"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 9,
+                  "endColumn": 10,
+                  "charOffset": 487,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppInitializedValueIsAlwaysRewritten",
+          "message": {
+            "text": "Local variable 'start_time' is reassigned in all paths before being read",
+            "id": "CppInitializedValueIsAlwaysRewritten"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 16,
+                  "endColumn": 26,
+                  "charOffset": 556,
+                  "charLength": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppInitializedValueIsAlwaysRewritten",
+          "message": {
+            "text": "Local variable 'end_time' is reassigned in all paths before being read",
+            "id": "CppInitializedValueIsAlwaysRewritten"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 16,
+                  "endColumn": 24,
+                  "charOffset": 630,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppInitializedValueIsAlwaysRewritten",
+          "message": {
+            "text": "Local variable 'bench_time' is reassigned in all paths before being read",
+            "id": "CppInitializedValueIsAlwaysRewritten"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 16,
+                  "endColumn": 26,
+                  "charOffset": 700,
+                  "charLength": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyBugproneNarrowingConversions",
+          "message": {
+            "text": "Narrowing conversion from 'double' to 'bool' [bugprone-narrowing-conversions]",
+            "id": "CppClangTidyBugproneNarrowingConversions"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 13,
+                  "endColumn": 22,
+                  "charOffset": 1247,
+                  "charLength": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticNonportableSystemIncludePath",
+          "message": {
+            "text": "Non-portable path to file '<sdkddkver.h>'; specified path differs in case from file name on disk [clang-diagnostic-nonportable-system-include-path]",
+            "id": "CppClangTidyClangDiagnosticNonportableSystemIncludePath"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 10,
+                  "endColumn": 23,
+                  "charOffset": 1723,
+                  "charLength": 13
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticNonportableSystemIncludePath",
+          "message": {
+            "text": "Non-portable path to file '<Windows.h>'; specified path differs in case from file name on disk [clang-diagnostic-nonportable-system-include-path]",
+            "id": "CppClangTidyClangDiagnosticNonportableSystemIncludePath"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 62,
+                  "startColumn": 10,
+                  "endColumn": 21,
+                  "charOffset": 1747,
+                  "charLength": 11
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppCStyleCast",
+          "level": "note",
+          "message": {
+            "text": "C-style cast is used instead of a C++ cast",
+            "id": "CppCStyleCast"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 12,
+                  "endColumn": 20,
+                  "charOffset": 1897,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppCStyleCast",
+          "level": "note",
+          "message": {
+            "text": "C-style cast is used instead of a C++ cast",
+            "id": "CppCStyleCast"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 33,
+                  "endColumn": 41,
+                  "charOffset": 1918,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDoxygenUnresolvedReference",
+          "message": {
+            "text": "Cannot resolve symbol 'func'",
+            "id": "CppDoxygenUnresolvedReference"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.h",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 11,
+                  "endColumn": 15,
+                  "charOffset": 292,
+                  "charLength": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDoxygenUndocumentedParameter",
+          "level": "note",
+          "message": {
+            "text": "Missing function parameter description for the parameter 'f'",
+            "id": "CppDoxygenUndocumentedParameter"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/benchmark.h",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 55,
+                  "endColumn": 56,
+                  "charOffset": 710,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeDeprecatedHeaders",
+          "level": "note",
+          "message": {
+            "text": "Inclusion of deprecated C++ header 'stdio.h'; consider using 'cstdio' instead [modernize-deprecated-headers]",
+            "id": "CppClangTidyModernizeDeprecatedHeaders"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 10,
+                  "endColumn": 19,
+                  "charOffset": 89,
+                  "charLength": 9
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppPolymorphicClassWithNonVirtualPublicDestructor",
+          "message": {
+            "text": "Polymorphic class 'Base' has a non-virtual public destructor",
+            "id": "CppPolymorphicClassWithNonVirtualPublicDestructor"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 7,
+                  "endColumn": 11,
+                  "charOffset": 148,
+                  "charLength": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppVirtualFunctionCallInsideCtor",
+          "message": {
+            "text": "Call to a virtual function inside a constructor is resolved at compile time",
+            "id": "CppVirtualFunctionCallInsideCtor"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 15,
+                  "endColumn": 22,
+                  "charOffset": 241,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppHiddenFunction",
+          "message": {
+            "text": "Non-virtual destructor 'Base::~Base()' is hidden in derived class 'Derived'",
+            "id": "CppHiddenFunction"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 5,
+                  "endColumn": 10,
+                  "charOffset": 331,
+                  "charLength": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppMemberFunctionMayBeConst",
+          "level": "note",
+          "message": {
+            "text": "Member function can be made const",
+            "id": "CppMemberFunctionMayBeConst"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 9,
+                  "endColumn": 14,
+                  "charOffset": 449,
+                  "charLength": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppPolymorphicClassWithNonVirtualPublicDestructor",
+          "message": {
+            "text": "Polymorphic class 'Derived' has a non-virtual public destructor",
+            "id": "CppPolymorphicClassWithNonVirtualPublicDestructor"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 7,
+                  "endColumn": 14,
+                  "charOffset": 488,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeUseEqualsDefault",
+          "level": "note",
+          "message": {
+            "text": "Use '= default' to define a trivial default constructor [modernize-use-equals-default]",
+            "id": "CppClangTidyModernizeUseEqualsDefault"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 2,
+                  "endColumn": 9,
+                  "charOffset": 524,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppHidingFunction",
+          "message": {
+            "text": "Destructor 'Derived::~Derived()' hides a non-virtual function from class 'Base'",
+            "id": "CppHidingFunction"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 5,
+                  "endColumn": 13,
+                  "charOffset": 551,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppEnforceOverridingFunctionStyle",
+          "level": "note",
+          "message": {
+            "text": "Overriding function 'int Derived::ClassID()' does not have an 'override' specifier",
+            "id": "CppEnforceOverridingFunctionStyle"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 17,
+                  "endColumn": 24,
+                  "charOffset": 613,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeUseAuto",
+          "level": "note",
+          "message": {
+            "text": "Use auto when initializing with new to avoid duplicating the type name [modernize-use-auto]",
+            "id": "CppClangTidyModernizeUseAuto"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 5,
+                  "endColumn": 16,
+                  "charOffset": 751,
+                  "charLength": 11
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticReturnStackAddress",
+          "message": {
+            "text": "Reference to stack memory associated with local variable 'byrefret' returned [clang-diagnostic-return-stack-address]",
+            "id": "CppClangTidyClangDiagnosticReturnStackAddress"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 12,
+                  "endColumn": 20,
+                  "charOffset": 983,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppPolymorphicClassWithNonVirtualPublicDestructor",
+          "message": {
+            "text": "Polymorphic class 'A' has a non-virtual public destructor",
+            "id": "CppPolymorphicClassWithNonVirtualPublicDestructor"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 7,
+                  "endColumn": 8,
+                  "charOffset": 1007,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeUseNodiscard",
+          "level": "note",
+          "message": {
+            "text": "Function 'GetName' should be marked [[nodiscard]] [modernize-use-nodiscard]",
+            "id": "CppClangTidyModernizeUseNodiscard"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 5,
+                  "endColumn": 12,
+                  "charOffset": 1026,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppPolymorphicClassWithNonVirtualPublicDestructor",
+          "message": {
+            "text": "Polymorphic class 'B' has a non-virtual public destructor",
+            "id": "CppPolymorphicClassWithNonVirtualPublicDestructor"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 7,
+                  "endColumn": 8,
+                  "charOffset": 1097,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyModernizeUseNodiscard",
+          "level": "note",
+          "message": {
+            "text": "Function 'GetName' should be marked [[nodiscard]] [modernize-use-nodiscard]",
+            "id": "CppClangTidyModernizeUseNodiscard"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 5,
+                  "endColumn": 12,
+                  "charOffset": 1127,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppEnforceOverridingFunctionStyle",
+          "level": "note",
+          "message": {
+            "text": "Overriding function 'std::string B::GetName() const' does not have an 'override' specifier",
+            "id": "CppEnforceOverridingFunctionStyle"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 80,
+                  "startColumn": 25,
+                  "endColumn": 32,
+                  "charOffset": 1147,
+                  "charLength": 7
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyPerformanceUnnecessaryValueParam",
+          "level": "note",
+          "message": {
+            "text": "The parameter 'a' is copied for each invocation but only used as a const reference; consider making it a const reference [performance-unnecessary-value-param]",
+            "id": "CppClangTidyPerformanceUnnecessaryValueParam"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 16,
+                  "endColumn": 17,
+                  "charOffset": 1207,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppParameterMayBeConstPtrOrRef",
+          "level": "note",
+          "message": {
+            "text": "Parameter 'a' can be made reference to const",
+            "id": "CppParameterMayBeConstPtrOrRef"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 18,
+                  "endColumn": 19,
+                  "charOffset": 1312,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyBugproneExceptionEscape",
+          "message": {
+            "text": "An exception may be thrown in function 'main' which should not throw exceptions [bugprone-exception-escape]",
+            "id": "CppClangTidyBugproneExceptionEscape"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 5,
+                  "endColumn": 9,
+                  "charOffset": 1398,
+                  "charLength": 4
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDeclaratorNeverUsed",
+          "message": {
+            "text": "Local variable 'unusedvariable' is never used",
+            "id": "CppDeclaratorNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 9,
+                  "endColumn": 23,
+                  "charOffset": 1498,
+                  "charLength": 14
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDeclarationHidesLocal",
+          "message": {
+            "text": "Declaration of 'shadowed' hides previous local declaration",
+            "id": "CppDeclarationHidesLocal"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 14,
+                  "endColumn": 22,
+                  "charOffset": 1569,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppPrintfBadFormat",
+          "message": {
+            "text": "Cannot print value of type 'int' that implies specifier '%d' with format specifier '%llu' that implies type 'unsigned long long'",
+            "id": "CppPrintfBadFormat"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 37,
+                  "endColumn": 40,
+                  "charOffset": 1655,
+                  "charLength": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticFormat",
+          "message": {
+            "text": "Format specifies type 'unsigned long long' but the argument has type 'int' [clang-diagnostic-format]",
+            "id": "CppClangTidyClangDiagnosticFormat"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 45,
+                  "endColumn": 53,
+                  "charOffset": 1663,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticParentheses",
+          "message": {
+            "text": "& has lower precedence than ==; == will be evaluated first [clang-diagnostic-parentheses]",
+            "id": "CppClangTidyClangDiagnosticParentheses"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 17,
+                  "endColumn": 18,
+                  "charOffset": 1773,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticParentheses",
+          "message": {
+            "text": "Using the result of an assignment as a condition without parentheses [clang-diagnostic-parentheses]",
+            "id": "CppClangTidyClangDiagnosticParentheses"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 118,
+                  "startColumn": 17,
+                  "endColumn": 18,
+                  "charOffset": 1870,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppLocalVariableMayBeConst",
+          "level": "note",
+          "message": {
+            "text": "Local variable 'fx' can be made const",
+            "id": "CppLocalVariableMayBeConst"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 9,
+                  "endColumn": 11,
+                  "charOffset": 2002,
+                  "charLength": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppLocalVariableMayBeConst",
+          "level": "note",
+          "message": {
+            "text": "Local variable 'fy' can be made const",
+            "id": "CppLocalVariableMayBeConst"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 130,
+                  "startColumn": 9,
+                  "endColumn": 11,
+                  "charOffset": 2019,
+                  "charLength": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyBugproneIntegerDivision",
+          "message": {
+            "text": "Result of integer division used in a floating point context; possible loss of precision [bugprone-integer-division]",
+            "id": "CppClangTidyBugproneIntegerDivision"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 131,
+                  "startColumn": 18,
+                  "endColumn": 20,
+                  "charOffset": 2045,
+                  "charLength": 2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticImplicitIntFloatConversion",
+          "message": {
+            "text": "Implicit conversion from 'int' to 'float' may lose precision [clang-diagnostic-implicit-int-float-conversion]",
+            "id": "CppClangTidyClangDiagnosticImplicitIntFloatConversion"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 131,
+                  "startColumn": 21,
+                  "endColumn": 22,
+                  "charOffset": 2048,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppAssignedValueIsNeverUsed",
+          "message": {
+            "text": "Assigned value is never used",
+            "id": "CppAssignedValueIsNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 5,
+                  "endColumn": 11,
+                  "charOffset": 2084,
+                  "charLength": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticSelfAssign",
+          "message": {
+            "text": "Explicitly assigning value of variable of type 'float' to itself [clang-diagnostic-self-assign]",
+            "id": "CppClangTidyClangDiagnosticSelfAssign"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 133,
+                  "startColumn": 10,
+                  "endColumn": 11,
+                  "charOffset": 2089,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppLocalVariableMayBeConst",
+          "level": "note",
+          "message": {
+            "text": "Local variable 'scalar' can be made pointer to const",
+            "id": "CppLocalVariableMayBeConst"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 135,
+                  "startColumn": 11,
+                  "endColumn": 17,
+                  "charOffset": 2110,
+                  "charLength": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticMismatchedNewDelete",
+          "message": {
+            "text": "'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [clang-diagnostic-mismatched-new-delete]",
+            "id": "CppClangTidyClangDiagnosticMismatchedNewDelete"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 137,
+                  "startColumn": 5,
+                  "endColumn": 11,
+                  "charOffset": 2141,
+                  "charLength": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppAssignedValueIsNeverUsed",
+          "message": {
+            "text": "Assigned value is never used",
+            "id": "CppAssignedValueIsNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 143,
+                  "startColumn": 13,
+                  "endColumn": 23,
+                  "charOffset": 2237,
+                  "charLength": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDeclarationHidesLocal",
+          "message": {
+            "text": "Declaration of 'shadowed' hides previous local declaration",
+            "id": "CppDeclarationHidesLocal"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 147,
+                  "startColumn": 17,
+                  "endColumn": 25,
+                  "charOffset": 2306,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppDeclaratorNeverUsed",
+          "message": {
+            "text": "Local variable 'shadowed' is never used",
+            "id": "CppDeclaratorNeverUsed"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 147,
+                  "startColumn": 17,
+                  "endColumn": 25,
+                  "charOffset": 2306,
+                  "charLength": 8
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppLocalVariableMayBeConst",
+          "level": "note",
+          "message": {
+            "text": "Local variable 'str' can be made const",
+            "id": "CppLocalVariableMayBeConst"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 168,
+                  "startColumn": 14,
+                  "endColumn": 17,
+                  "charOffset": 2665,
+                  "charLength": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppClangTidyClangDiagnosticFormatExtraArgs",
+          "message": {
+            "text": "Data argument not used by format string [clang-diagnostic-format-extra-args]",
+            "id": "CppClangTidyClangDiagnosticFormatExtraArgs"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 169,
+                  "startColumn": 27,
+                  "endColumn": 30,
+                  "charOffset": 2726,
+                  "charLength": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CppPossiblyUnintendedObjectSlicing",
+          "message": {
+            "text": "Possibly unintended object slicing: class 'A' is value-initialized from derived class 'B'",
+            "id": "CppPossiblyUnintendedObjectSlicing"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "sample/sample.cpp",
+                  "uriBaseId": "SRCROOT"
+                },
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 13,
+                  "endColumn": 14,
+                  "charOffset": 2805,
+                  "charLength": 1
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}
