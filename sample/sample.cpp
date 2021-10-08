@@ -5,17 +5,24 @@
 
 
 #include "stdio.h"
-
+#include <memory>
+#include <string>
 
 
 class Base
 {
 private:
     int _id;
+    char* _leak;
 public:
     Base()
     {
         _id = ClassID(); // call vfunction from constructor
+        _leak = new char[255];
+    }
+    ~Base() // should be virtual!!
+    {
+        delete _leak;
     }
     virtual int ClassID() { return 1; }
     int GetID() { return _id; }
@@ -29,6 +36,10 @@ public:
 	{
 		
 	}
+    ~Derived()
+	{
+		// will not call base!
+	}
     virtual int ClassID() { return 2; }
 };
 
@@ -38,6 +49,50 @@ int useretval(int& uninit)
     uninit++;
     return uninit;
 }
+
+void LeakSomeMemory()
+{
+    std::string* leak = new std::string();
+    leak->append("hello world");
+}
+
+
+
+std::string& retBadRef(const std::string& a, const std::string& b)
+{
+    std::string byrefret;
+    byrefret += a;
+    byrefret += b;
+    return byrefret;
+}
+
+
+class A
+{
+public:
+    virtual std::string GetName() const { return "A"; }
+    
+};
+
+class B : public A
+{
+public:
+    virtual std::string GetName() const { return "B"; }
+    
+};
+
+void badfunc(A a) // should be by ref
+{
+    printf("badfunc: %s\n",a.GetName().c_str());
+    
+}
+
+void goodfunc(A& a) // ok by  ref
+{
+    printf("goodfunc: %s\n", a.GetName().c_str());
+
+}
+
 
 int main(int argc, const char* argv[])
 {
@@ -101,7 +156,26 @@ int main(int argc, const char* argv[])
 
     Derived derived;
     printf("Derived Class id: %d", derived.GetID());
+#ifndef _WIN32
+    std::auto_ptr<Derived> a(new Derived); // deprecated
+#endif
 
+    LeakSomeMemory();
+
+    
+    try
+    {
+        auto str = retBadRef("test", "test2");
+        printf("strings", str.c_str());
+    }
+    catch (...)
+    {
+    }
+
+
+    B b;
+    badfunc(b);
+    goodfunc(b);
 
     return 0;
 }
