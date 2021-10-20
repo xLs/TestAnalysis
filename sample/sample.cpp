@@ -15,7 +15,7 @@ private:
     int _id;
     char* _leak;
 public:
-    Base()
+    Base()  // noexcept
     {
         _id = ClassID(); // call vfunction from constructor
         _leak = new char[255];
@@ -40,7 +40,7 @@ public:
 	{
 		// will not call base!
 	}
-    virtual int ClassID() { return 2; }
+    virtual int ClassID()  { return 2; } // noexcept?
 };
 
 int useretval(int& uninit)
@@ -67,7 +67,7 @@ std::string& retBadRef(const std::string& a, const std::string& b)
 }
 
 
-class A
+class A // no virtual destructor?
 {
 public:
     virtual std::string GetName() const { return "A"; }
@@ -77,17 +77,17 @@ public:
 class B : public A
 {
 public:
-    virtual std::string GetName() const { return "B"; }
+    virtual std::string GetName()  const { return "B"; } // where is override?
     
 };
 
-void badfunc(A a) // should be by ref
+void badfunc(A a) // oh this happens way too often!
 {
     printf("badfunc: %s\n",a.GetName().c_str());
     
 }
 
-void goodfunc(A& a) // ok by  ref
+void goodfunc(A& a) // ok by  ref, should be const?
 {
     printf("goodfunc: %s\n", a.GetName().c_str());
 
@@ -137,8 +137,8 @@ int main(int argc, const char* argv[])
     }
 
 
-    int fx = 7;
-    int fy = 2;
+    int fx = 7; // could be const
+    int fy = 2; // could be const
     float fval = fx / fy;   // unpromoted float
 
     fval = fval;
