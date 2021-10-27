@@ -1,42 +1,37 @@
-# This workflow integrates Scan with GitHub's code scanning feature
-# Scan is a free open-source security tool for modern DevOps teams from ShiftLeft
-# Visit https://slscan.io/en/latest/integrations/code-scan for help
-name: SL Scan
+name: "CodeQL"
 
 on:
   push:
     branches: [ main ]
   pull_request:
-    # The branches below must be a subset of the branches above
     branches: [ main ]
-  schedule:
-    - cron: '32 8 * * 3'
 
 jobs:
-  Scan-Build:
-    # Scan runs on ubuntu, mac and windows
+  analyze:
+    name: Analyze
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'cpp' ]
+
     steps:
-    - uses: actions/checkout@v2
-    # Instructions
-    # 1. Setup JDK, Node.js, Python etc depending on your project type
-    # 2. Compile or build the project before invoking scan
-    #    Example: mvn compile, or npm install or pip install goes here
-    # 3. Invoke Scan with the github token. Leave the workspace empty to use relative url
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-    - name: Perform Scan
-      uses: ShiftLeftSecurity/scan-action@master
-      env:
-        WORKSPACE: ""
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SCAN_AUTO_BUILD: true
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
       with:
-        output: reports
-        # Scan auto-detects the languages in your project. To override uncomment the below variable and set the type
-        # type: credscan,java
-        # type: c++
+        languages: ${{ matrix.language }}
+        queries: security-extended
 
-    - name: Upload report
-      uses: github/codeql-action/upload-sarif@v1
-      with:
-        sarif_file: reports
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v1
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
