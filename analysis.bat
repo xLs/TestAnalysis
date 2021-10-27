@@ -1,0 +1,1 @@
+c:\tools\resharper.cli\inspectcode.exe

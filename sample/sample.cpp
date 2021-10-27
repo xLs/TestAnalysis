@@ -18,11 +18,11 @@ public:
     Base()  // noexcept
     {
         _id = ClassID(); // call vfunction from constructor
-        _leak = new char[255];
+        _leak = new char[255]; // leak with derived class!
     }
     ~Base() // should be virtual!!
     {
-        delete _leak;
+        delete _leak;       // leak with derived class!
     }
     virtual int ClassID() { return 1; }
     int GetID() { return _id; }
@@ -38,22 +38,21 @@ public:
 	}
     ~Derived()  // base does not have a virtual destructor!
 	{
-		// will not call base!
+		// will not call base! // leak in base class
 	}
     virtual int ClassID()  { return 2; } // noexcept?
 };
 
 int useretval(int& uninit)
 {
-    
     uninit++;
     return uninit;
 }
 
 void LeakSomeMemory()
 {
-    std::string* leak = new std::string();
-    leak->append("hello world");
+    std::string* leak = new std::string();  // obvious leak
+    leak->append("hello world"); // obvious leak
 }
 
 
@@ -63,7 +62,7 @@ std::string& retBadRef(const std::string& a, const std::string& b)
     std::string byrefret;
     byrefret += a;
     byrefret += b;
-    return byrefret;
+    return byrefret;  // ret local  byref 
 }
 
 
@@ -93,6 +92,33 @@ void goodfunc(A& a) // ok by  ref, should be const?
 
 }
 
+void path_sensitive(int *p, bool cond)
+{ 
+    int state=0; 
+    // branch 1  
+    if(p!=nullptr){ 
+        state=1; 
+    } 
+    // branch 2 
+    if(cond){ 
+        state=2; 
+        p = nullptr; 
+    } 
+
+    // branch 3 
+    if(state==1){ 
+        *p=42; // Null dereference? 
+    }
+}
+
+
+void local_analysis(int *p, int *q, bool cond){ 
+    if (p == nullptr) 
+        return; 
+    q = nullptr; 
+    std::swap(p, q); 
+    *p = 42; // Null dereference 
+}
 
 static int double_up = 0;   // lets define this in another scope
 
@@ -189,6 +215,9 @@ int main(int argc, const char* argv[])
     badfunc(b);     // nasty
     goodfunc(b);
 
+	int p = 3;
+	path_sensitive(&p, true);
+	local_analysis(&p,&p,true); 
     return 0;
 }
 
