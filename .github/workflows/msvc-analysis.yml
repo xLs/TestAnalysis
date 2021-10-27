@@ -44,7 +44,16 @@ jobs:
           cmakeBuildDirectory: ${{ env.build }}
           # Ruleset file that will determine what checks will be run
           ruleset: AllRules.ruleset
-
+      - name: Run clang-tidy
+        uses: HorstBaerbel/action-clang-tidy@1.2
+      # These are optional (defaults displayed)
+        with:
+          scandir: '.'
+          builddir: 'build'
+          excludedirs: ''
+          extensions: 'c,h,C,H,cpp,hpp,cc,hh,c++,h++,cxx,hxx'
+          cmakeoptions: ''
+        
       # Upload SARIF file to GitHub Code Scanning Alerts
       - name: Upload SARIF to GitHub
         uses: github/codeql-action/upload-sarif@v1
