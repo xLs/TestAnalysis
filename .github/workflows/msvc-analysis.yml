@@ -8,13 +8,7 @@
 
 name: Microsoft C++ Code Analysis
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  schedule:
-    - cron: '31 15 * * 4'
+on: [ push, pull_request ]
 
 env:
   # Path to the CMake build directory.
