@@ -219,7 +219,7 @@ int main(int argc, const char* argv[])
 	path_sensitive(&p, true);
 	local_analysis(&p,&p,true); 
 	
-	string str="hello world!";
+	std::string str="hello world!";
 	printf("love strings %s",str); // not a char*
 	
 	{
