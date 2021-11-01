@@ -221,6 +221,11 @@ int main(int argc, const char* argv[])
 	
 	string str="hello world!";
 	printf("love strings %s",str); // not a char*
+	
+	{
+		int p = 3;
+		printf("hello %d",p);
+	}
     return 0;
 }
 
