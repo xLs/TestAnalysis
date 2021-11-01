@@ -1,4 +1,4 @@
-// The Worst possible coder! please contribute!
+// The Worst possible coder! please contribute!added a new feature here!
 //
 
 
@@ -218,6 +218,14 @@ int main(int argc, const char* argv[])
 	int p = 3;
 	path_sensitive(&p, true);
 	local_analysis(&p,&p,true); 
+	
+	std::string str="hello world!";
+	printf("love strings %s",str); // not a char*
+	
+	{
+		int p = 3;
+		printf("hello %d",p);
+	}
     return 0;
 }
 
