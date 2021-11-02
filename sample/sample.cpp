@@ -221,10 +221,12 @@ int main(int argc, const char* argv[])
 	
 	std::string str="hello world!";
 	printf("love strings %s",str); // not a char*
-	
+	try
 	{
-		int p = 3;
-		printf("hello %d",p);
+		int p = 13371337;
+		printf("hello %c %llu",p, p);
+	} catch(...)
+	{
 	}
     return 0;
 }
