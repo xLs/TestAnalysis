@@ -46,10 +46,10 @@ public:
 class Uninitialize
 {
 public:
-	Uninitialize() {}
+	Uninitialize() {} // forgot to initial _member 
 	int getValue() const { return _member; }
 private:
-	int _member;
+	unsigned char _member;	// uninitialized
 };
 int useretval(int& uninit)
 {
@@ -238,9 +238,24 @@ int main(int argc, const char* argv[])
 	}
 
 	Uninitialize u;
-	int v = u.getValue();
-	printf("weak random getValue: %d",v);
+	var v = u.getValue();
+	switch(v)
+	{
+		case -1: // unsigend char.. doh
+			printf("sure never gonna happen");
+		break;
+		case 1: // fine
+			printf("hello 1");
+		break;
+		case 258: // unreachable
+			printf("not really?");
+		break;
+	}
 	
+	printf("weak random getValue: %d",v);
+	return 0;
+	
+	printf("another unreachable line");
     return 0;
 }
 
