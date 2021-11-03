@@ -238,7 +238,7 @@ int main(int argc, const char* argv[])
 	}
 
 	Uninitialize u;
-	var v = u.getValue();
+	auto v = u.getValue(); 
 	switch(v)
 	{
 		case -1: // unsigend char.. doh
