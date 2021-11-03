@@ -29,7 +29,7 @@ jobs:
         # Provide a unique ID to access the sarif output path
         id: run-analysis
         with:
-          solution: ${{ env.build }}/sample/sample.sln
+          solution: ${{ env.build }}/sample.sln
           buildConfiguration: ${{ env.config }}
           # Paths to ignore analysis of CMake targets and includes
           # ignoredPaths: ${{ github.workspace }}/dependencies;${{ github.workspace }}/test
