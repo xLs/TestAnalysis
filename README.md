@@ -1,5 +1,7 @@
-# TestAnalysis
-github feature testing 
-[![xls/Microsoft C++ Code Analysis](https://github.com/xls/TestAnalysis/actions/workflows/msvc-analysis.yml/badge.svg)](https://github.com/xls/TestAnalysis/actions/workflows/msvc-analysis.yml)
+# Testing Code Analysis features using github actions
 
-[![Upload SARIF](https://github.com/xLs/TestAnalysis/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/xLs/TestAnalysis/actions/workflows/codeql-analysis.yml)
+
+feel free to contribute worst possible code that you think should be found by static analysis.
+
+[![resharper C++ Code Analysis](https://github.com/xls/TestAnalysis/actions/workflows/resharper-analysis.yml/badge.svg)](https://github.com/xls/TestAnalysis/actions/workflows/resharper-analysis.yml)
+
