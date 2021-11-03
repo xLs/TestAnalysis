@@ -238,7 +238,7 @@ int main(int argc, const char* argv[])
 	}
 
 	Uninitialize u;
-	int v = u = getValue();
+	int v = u.getValue();
 	printf("weak random getValue: %d",v);
 	
     return 0;
