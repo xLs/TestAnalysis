@@ -6,7 +6,7 @@
 # Find more information at:
 # https://github.com/xls/resharper-code-analysis-action
 
-name: resharper C++ Code Analysis
+name: Resharper C++ Code Analysis
 
 on: [ push, pull_request ]
 
