@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Aristocrat EGM Toolchain
 
 on:
   push:
