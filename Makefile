@@ -1,6 +1,6 @@
 
 UNAME_S := $(shell uname -s)
-CXX      := -c++
+CXX      := -g++
 CXXFLAGS := -Wno-unused-function -Wall -m64  -std=c++17
 LDFLAGS  := -L/usr/lib -lstdc++ -lm
 BUILD    := ./build
