@@ -3,8 +3,9 @@ name: Aristocrat EGM Toolchain
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
+# dont allow pull request to run (a third party can fork and pull-request which will yield a hosted build, simply changing makefile can cause the runner to execute bad stuff).
 
 jobs:
   build:
