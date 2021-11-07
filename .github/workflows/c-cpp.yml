@@ -1,4 +1,4 @@
-name: Aristocrat EGM Toolchain
+name: ATI Toolchain
 
 on:
   push:
