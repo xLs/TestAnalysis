@@ -1,5 +1,7 @@
 # Testing Code Analysis features using github actions
 
+Hello
+
 
 feel free to contribute the worst possible code that you think should be found by static analysis.
 
