@@ -13,4 +13,5 @@ feel free to contribute the worst possible code that you think should be found b
 ![GitHub last commit](https://img.shields.io/github/last-commit/xls/TestAnalysis?logo=Bugatti)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/xls/TestAnalysis?color=0088ff)
   
+Added Feature #2
 :)
