@@ -126,6 +126,7 @@ void local_analysis(int *p, int *q, bool cond){
     q = nullptr; 
     std::swap(p, q); 
     *p = 42; // Null dereference 
+	
 }
 
 static int double_up = 0;   // lets define this in another scope
@@ -135,7 +136,7 @@ int main(int argc, const char* argv[])
 	int uninitialized_value;
 	int shadowed = 5;
 	int unusedvariable = 0;
-
+	long unused_var = 0;
 	int mispell = 23; // bad speling behiend the keiboard
 	mispell++;
 
