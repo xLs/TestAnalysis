@@ -138,6 +138,7 @@ int main(int argc, const char* argv[])
 	int unusedvariable = 0;
 	int unusedvariable2 = 0;
 	long unused_var = 0;
+	long unused_var2 = 0;
 	int mispell = 23; // bad speling behiend the keiboard
 	mispell++;
 
