@@ -46,7 +46,7 @@ public:
 class Uninitialize
 {
 public:
-	Uninitialize() {} // forgot to initial _member 
+	Uninitialize() {} // forgot to initial _member   
 	int getValue() const { return _member; }
 private:
 	unsigned char _member;	// uninitialized
