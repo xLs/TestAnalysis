@@ -99,6 +99,11 @@ void path_sensitive(int *p, bool cond)
     if(p!=nullptr){ 
         state=1; 
     } 
+    for(int state = 0; state < 1; state ++)
+    {
+	    int p =0;
+	    ++p;
+    }
     // branch 2 
     if(cond){ 
         state=2; 
